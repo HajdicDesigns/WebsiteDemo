@@ -1,54 +1,45 @@
-# React + TypeScript + Vite
+# Free Website Example - React Version
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a simple React.js project created for a blog post demonstration on how to build a website and host it for free using GitHub Pages and Cloudflare.
 
-Currently, two official plugins are available:
+## Running Locally
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+To run this project on your local machine, follow these steps:
 
-## Expanding the ESLint configuration
+### Prerequisites
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+* **Node.js and npm:** Ensure you have Node.js and npm (Node Package Manager) installed. You can download them from [nodejs.org](https://nodejs.org/).
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+### Installation
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+1.  **Clone the repository:**
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+    ```bash
+    git clone https://github.com/HajdicDesigns/WebsiteDemo.git
+    ```
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+3.  **Navigate to the project directory and install dependencies:**
+
+    ```bash
+    cd WebsiteDemo
+    npm install
+    ```
+
+### Running the Application
+
+1.  **Start the development server:**
+
+    ```bash
+    npm run dev
+    ```
+
+2.  **Open in your browser:**
+
+    The application will usually be served at `http://localhost:5173/`. Open this URL in your web browser to view the website.
+
+### Build for Deployment
+
+To create an optimized build of the application (e.g., for deployment to Cloudflare Pages), run:
+
+```bash
+npm run build
